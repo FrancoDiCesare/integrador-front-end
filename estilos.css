@@ -1,0 +1,19 @@
+/*SOLO FUENTE*/ 
+
+h3,h6{
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+}
+
+h5{
+    font-family: 'Patrick Hand';
+}
+
+p{
+    font-family: 'Amatic SC'; 
+}
+
+ul,a{
+    font-family: 'Satisfy';
+
+}
