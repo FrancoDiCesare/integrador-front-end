@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!--Goggle Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Merriweather:ital,wght@1,900&family=Patrick+Hand&family=Satisfy&display=swap"
+        rel="stylesheet">
+
+    <!--MIS ESTILOS-->
+    <link rel="stylesheet" href="./estilos.css">
+    <title>Venta Entradas</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark ">
+            <div class="container-fluid">
+                <img src="./img/codoacodo.png" height="60px">
+                <a href="./index.html" class="navbar-brand text-white">Conf Bs As</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="./index.html" class="nav-link text-white ">La conferencia </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#seccionOradores" class="nav-link text-white">Los oradores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#seccionFecha" class="nav-link text-white">El lugar y la fecha</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#seccionConvertite" class="nav-link text-white ">Convertite en orador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-success">Comprar tickets</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="text-center m-4">
+            <a name="seccionOradores"></a>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-2 text-center mx-auto" style="width: 50rem; ">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body border border-3 border-primary card-hover">
+                        <h5 class="card-title fw-semibold">Estuadiante</h5>
+                        <p class="card-text">Tiene un descuento <br>
+                            <spam class="fw-bold">80%</spam> <br>*presentar documentacion
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body border border-3 border-primary-subtle card-hover">
+                        <h5 class="card-title fw-semibold">Trainee</h5>
+
+                        <p class="card-text">Tiene un descuento <br>
+                            <spam class="fw-bold">50%</spam> <br>*presentar documentacion
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body border border-3 border-warning card-hover ">
+                        <h5 class="card-title fw-semibold">Junior</h5>
+
+                        <p class="card-text">Tiene un descuento <br>
+                            <spam class="fw-bold tamano">15%</spam> <br>*presentar documentacion
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <a name="seccionConvertite"></a>
+    <form>
+        <div class="m-4 col-6 mx-auto">
+            <h6 class="text-center fs-6 fw-lighter"> VENTA<br>
+                <spam class="fs-2 text-bold">VALOR DE TICKET $200</spam>
+            </h6>
+            <div class=" row g-2  mx-auto ">
+                <div class="col">
+                    <input id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre"
+                        aria-label="Nombre">
+                    <p id="errorNombre" class="error"></p>
+                </div>
+
+                <div class="col">
+                    <input type="text" class="form-control" id="apellido" placeholder="Apellido" aria-label="Apellido">
+                    <p id="errorApellido" class="error"></p>
+                </div>
+            </div>
+            <div class=" mx-auto p-4">
+                <input type="email" class="form-control" id="email" placeholder="name@ejemplo.com" aria-label="Email">
+                <p id="errorEmail" class="error"></p>
+            </div>
+            <div>
+                <p class="col bg-info p-2 text-bold" id="total">TOTAL A PAGAR :</p>
+                <p class="error" id="total-pago"></p>
+            </div>
+            <!-- <div class="row  mx-auto g-2">
+            <div class="col"> 
+                <label for="exampleFormControlInput1" class="form-label fw-lighter">Cantidad max 10 </label>
+                <input type="text" class="form-control" id="estudiante" placeholder="Cantidad" aria-label="cantiadad">
+                <p id="totalEstudiante"></p>
+            </div>
+            <div class="col">
+
+                <label for="exampleFormControlInput1" class="form-label fw-lighter"></label>
+                <input type="text" class="form-control" id="cantidad" placeholder="Cantidad" aria-label="cantiadad" value="Estudiante" readonly>
+             </div>
+        </div>
+        <div class="row  mx-auto g-2">
+            <div class="col"> 
+                <label for="exampleFormControlInput1" class="form-label fw-lighter">Cantidad max 10 </label>
+                <input type="text" class="form-control" id="trainee" placeholder="Cantidad" aria-label="cantiadad">
+            </div>
+            <div class="col">
+
+                <label for="exampleFormControlInput1" class="form-label fw-lighter"></label>
+                <input type="text" class="form-control" id="cantidad" placeholder="Cantidad" aria-label="cantiadad" value="Trainee" readonly>
+             </div>
+        </div>
+        <div class="row  mx-auto g-2">
+            <div class="col"> 
+                <label for="exampleFormControlInput1" class="form-label fw-lighter">Cantidad max 10 </label>
+                <input type="text" class="form-control" id="trainee" placeholder="Cantidad" aria-label="cantiadad">
+            </div>
+            <div class="col">
+
+                <label for="exampleFormControlInput1" class="form-label fw-lighter"></label>
+                <input type="text" class="form-control" id="cantidad" placeholder="Cantidad" aria-label="cantiadad" value="Junior" readonly>
+             </div>
+        </div>
+        <div class="row  mx-auto g-2">
+            <div class="col"> 
+                <label for="exampleFormControlInput1" class="form-label fw-lighter">Cantidad max 10 </label>
+                <input type="text" class="form-control" id="trainee" placeholder="Cantidad" aria-label="cantiadad">
+            </div>
+            <div class="col">
+
+                <label for="exampleFormControlInput1" class="form-label fw-lighter"></label>
+                <input type="text" class="form-control" id="cantidad" placeholder="Cantidad" aria-label="cantiadad" value="General" readonly>
+             </div>
+        </div>-->
+            <div class="row">
+                <label for="exampleFormControlInput1" class="form-label fw-lighter">Cantidad max 10 </label>
+                <input type="text" class="form-control col" id="cantiadad-ticket" placeholder="Cantidad" aria-label="cantiadad">
+
+                <div class="col">
+                    <label for="exampleFormControlInput1" class="form-label fw-lighter">Eliga solo una Categoria
+                    </label>
+                    <select class="form-select" aria-label="categoria" id="categoria-entrada">
+                        <option selected>Seleciona la Categoria</option>
+                        <option value="1">Estudiante</option>
+                        <option value="2">Trainee</option>
+                        <option value="3">Junior</option>
+                        <option value="4">General</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class=" d-flex justify-content-center p-4">
+                <input class="btn btn-outline-success col" type="reset" value="Borrar">
+                <button class="btn btn-outline-success btn-form col" id="enviar" type="button">Total a pagar</button>
+            </div>
+        </div>
+    </form>
+
+    <footer>
+
+        <nav class="navbar navbar-expand-md entradasfondobarra ">
+            <div class="container-fluid ">
+                <div>
+                    <ul class="navbar-nav vw-100 ">
+                        <li class="nav-item col">
+                            <a class="nav-link text-white">Preguntas <br>Frecuentes</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link text-white ">Contacto</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link text-white ">Prensa</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link text-white ">Conferencia</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link text-white">Termino y <br>Condiciones</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link text-white ">Privacidad</a>
+                        </li>
+                        <li class="nav-item col">
+                            <a class="nav-link text-white">Estudiantes</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+
+    </footer>
+
+
+    <!--MIS SCRIPTS-->
+
+    <script src="./scripts.js"></script>
+
+    <!--SCRIPTS BOOTSTRAP-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

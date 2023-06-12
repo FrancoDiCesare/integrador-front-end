@@ -17,3 +17,22 @@ ul,a{
     font-family: 'Satisfy';
 
 }
+
+.entradasfondobarra{
+
+    background:rgb(37, 72, 107);
+    
+}
+
+.card-hover:hover{
+
+    transform: scale(1.15);
+    font-size: 25px;
+   
+}
+
+ .error{
+
+    color: red;
+   
+}
