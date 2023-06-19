@@ -96,7 +96,7 @@
     </main>
 
     <a name="seccionConvertite"></a>
-    <form>
+    <form action="" id="form">
         <div class="m-4 col-6 mx-auto">
             <h6 class="text-center fs-6 fw-lighter"> VENTA<br>
                 <spam class="fs-2 text-bold">VALOR DE TICKET $200</spam>
@@ -118,77 +118,32 @@
                 <p id="errorEmail" class="error"></p>
             </div>
             <div>
-                <p class="col bg-info p-2 text-bold" id="total">TOTAL A PAGAR :</p>
+                <p class="col pt-3 pb-3 p-3 bg-info-subtle fw-semibold text-primary border-primary-subtle" id="total">TOTAL A PAGAR : $</p>
                 <p class="error" id="total-pago"></p>
             </div>
-            <!-- <div class="row  mx-auto g-2">
-            <div class="col"> 
-                <label for="exampleFormControlInput1" class="form-label fw-lighter">Cantidad max 10 </label>
-                <input type="text" class="form-control" id="estudiante" placeholder="Cantidad" aria-label="cantiadad">
-                <p id="totalEstudiante"></p>
-            </div>
+            
             <div class="col">
-
-                <label for="exampleFormControlInput1" class="form-label fw-lighter"></label>
-                <input type="text" class="form-control" id="cantidad" placeholder="Cantidad" aria-label="cantiadad" value="Estudiante" readonly>
-             </div>
-        </div>
-        <div class="row  mx-auto g-2">
-            <div class="col"> 
-                <label for="exampleFormControlInput1" class="form-label fw-lighter">Cantidad max 10 </label>
-                <input type="text" class="form-control" id="trainee" placeholder="Cantidad" aria-label="cantiadad">
-            </div>
-            <div class="col">
-
-                <label for="exampleFormControlInput1" class="form-label fw-lighter"></label>
-                <input type="text" class="form-control" id="cantidad" placeholder="Cantidad" aria-label="cantiadad" value="Trainee" readonly>
-             </div>
-        </div>
-        <div class="row  mx-auto g-2">
-            <div class="col"> 
-                <label for="exampleFormControlInput1" class="form-label fw-lighter">Cantidad max 10 </label>
-                <input type="text" class="form-control" id="trainee" placeholder="Cantidad" aria-label="cantiadad">
-            </div>
-            <div class="col">
-
-                <label for="exampleFormControlInput1" class="form-label fw-lighter"></label>
-                <input type="text" class="form-control" id="cantidad" placeholder="Cantidad" aria-label="cantiadad" value="Junior" readonly>
-             </div>
-        </div>
-        <div class="row  mx-auto g-2">
-            <div class="col"> 
-                <label for="exampleFormControlInput1" class="form-label fw-lighter">Cantidad max 10 </label>
-                <input type="text" class="form-control" id="trainee" placeholder="Cantidad" aria-label="cantiadad">
-            </div>
-            <div class="col">
-
-                <label for="exampleFormControlInput1" class="form-label fw-lighter"></label>
-                <input type="text" class="form-control" id="cantidad" placeholder="Cantidad" aria-label="cantiadad" value="General" readonly>
-             </div>
-        </div>-->
-            <div class="row">
-                <label for="exampleFormControlInput1" class="form-label fw-lighter">Cantidad max 10 </label>
-                <input type="text" class="form-control col" id="cantiadad-ticket" placeholder="Cantidad" aria-label="cantiadad">
-
-                <div class="col">
-                    <label for="exampleFormControlInput1" class="form-label fw-lighter">Eliga solo una Categoria
-                    </label>
-                    <select class="form-select" aria-label="categoria" id="categoria-entrada">
-                        <option selected>Seleciona la Categoria</option>
-                        <option value="1">Estudiante</option>
-                        <option value="2">Trainee</option>
-                        <option value="3">Junior</option>
-                        <option value="4">General</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class=" d-flex justify-content-center p-4">
-                <input class="btn btn-outline-success col" type="reset" value="Borrar">
+                <p class="px-1 fs-5 fw-semibold "><u>CANTIDAD DE TICKETS:</u></p>
+                <input id="cantidadEntradas" type="text" class="form-control" placeholder="Cantidad" aria-label="Cantidad" required="" pattern="[0-9]+">
+                <p id="error_cantidad" class="pt-1 px-1"></p>
+              </div>
+              <div class="col">
+                <p class="px-1 fs-5 fw-semibold " ><u> CATEGORIAS:</u></p>
+                <select id="selectCategoria" class="form-select" aria-label="Default select example">
+                  <option selected>Elige tu entrada</option>
+                  <option value="1">Estudiante</option>
+                  <option value="2">Trainee</option>
+                 <option value="3">Junior</option>
+                  <option value="4">General</option>
+                </select>
+              </div>
+              
+              <div class=" d-flex justify-content-center p-4">
+                <input class="btn btn-outline-success col" id="botonBorrar" type="reset" value="Borrar">
                 <button class="btn btn-outline-success btn-form col" id="enviar" type="button">Total a pagar</button>
             </div>
         </div>
-    </form>
+        </form>
 
     <footer>
 
@@ -236,3 +191,5 @@
 </body>
 
 </html>
+
+

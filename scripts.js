@@ -8,6 +8,9 @@ const expRegular = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 
 const botonEnviar = document.getElementById("enviar");
 
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+})
 
 function validarNombre() {
     if (nombre.value.length<3) {
@@ -35,62 +38,46 @@ function validarEmail(){
     }
 }
 
-/*const selCategoria = document.getElementById("categoria").value;
-const cantidad = document.getElementById("cantiadad");
-const estudiantes = document.getElementById("estudiantes");
+//FUNCION DE PAGAR ENTRADAS 
+
+let valorGeneral = 200;
+let cantidadEntradas = document.getElementById("cantidadEntradas");
+let selectCategoria = document.getElementById("selectCategoria");  
+
+function totalAPagar() { 
+    switch (selectCategoria.value) {
+      case "1":
+        valorGeneral = valorGeneral * 0.2 * cantidadEntradas.value;
+        document.getElementById('total').innerHTML= "Total a pagar: $" + valorGeneral;
+        break;
+      case "2":
+        valorGeneral = 200 * 0.5 * cantidadEntradas.value;
+        document.getElementById('total').innerHTML= "Total a pagar: $" + valorGeneral;
+        break;
+      case "3":
+        valorGeneral = 200 * 0.85 * cantidadEntradas.value;
+        document.getElementById('total').innerHTML= "Total a pagar: $" + valorGeneral;
+        break;
+        case "4":
+            valorGeneral = 200 * cantidadEntradas.value;
+            document.getElementById('total').innerHTML= "Total a pagar: $" + valorGeneral;    
+            break;
+      default:
+        break;
+    }
+   
+ }  
 
 
-function totalAPagar(){
-    let total = cantidad.value * 200
-    return total;
+function borrarTotal(){
+    document.getElementById('total').innerHTML= "Total a pagar: $" ;
+    
 }
-
-
-console.log(total);*/
-
 
 botonEnviar.addEventListener("click", validarNombre);
 botonEnviar.addEventListener("click", validarApellido);
 botonEnviar.addEventListener("click", validarEmail);
-botonEnviar.addEventListener("click", categoriaEntradas);
+botonEnviar.addEventListener("click", totalAPagar); 
+botonBorrar.addEventListener("click" , borrarTotal)
 
-//FUNCION DE PAGAR ENTRADAS 
 
-/*
-const estudiante = document.getElementById("estudiante");
-const trainee = document.getElementById("trainee");
-var cantEstu = estudiante;
-
-function pagoEstudiante(){
-    if (estudiante<=10) {
-        document.getElementById("totalEstudiante").innerHTML=("El precio total es " + cantEstu*40);        
-    }else{
-        document.getElementById("totalEstudiante").innerHTML= ("El numero de entradas es incorrecto");
-    }
-}
-*/
-
-const cantidadTicket = document.getElementById("cantidad.ticket");
-const categoriaEntrada = document.getElementById("categoria-entrada");
-const totalPago = document.getElementById("total-pago");
-
-let total = 0 ;
-
-function categoriaEntradas(){
-switch (categoriaEntrada.value) {
-    case "General":
-        total = parseInt(cantidadTicket.value)*200
-        break;
-
-    case "Estudiante":
-        total = parseInt(cantidadTicket.value)*40
-        break;
-    case "Trainee":
-        total = parseInt(cantidadTicket.value)*100
-        break;
-    case "Junior":
-        total = parseInt(cantidadTicket.value)*170
-        break;
-}
-totalPago.innerHTML = "El total es : + "total" ";
-}
